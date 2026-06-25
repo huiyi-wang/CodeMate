@@ -1,9 +1,7 @@
 # 码伴 CodeMate — 后续 TODO
 
 > **新人算法工程师小助手**的能力 backlog：更多场景化提示词、一键工具、开工检查单。  
-> 实现某项后：在本文件标 `[x]`，并在 `SKILL.md` §迭代说明 写版本号。
-
-**当前版本**：v1.3（见 [SKILL.md](SKILL.md)）
+> 实现某项后：在本文件标 `[x]`，并同步更新 [SKILL.md](SKILL.md) §迭代说明。
 
 ---
 
@@ -63,7 +61,6 @@
 
 - [ ] **`diff_exclude_profiles.yaml`** — 按项目类型预置 exclude（权重、checkpoint、Testsets）  
 - [ ] **`link_checker.py`** — 校验 `.distill/*.md` 内相对链接与锚点是否存在  
-- [ ] **与 `colleague-skill` 互通** — 把某团队项目经验注册为 colleague 子 skill 的导入器  
 
 ---
 
@@ -109,17 +106,7 @@
 
 ---
 
-## 五、与关联 Skill 的衔接
-
-| 关联 Skill | TODO |
-|------------|------|
-| `ocr-inference` | 推理类项目蒸馏后自动生成「契约对照」节 |
-| `model-edge-deploy` | 训练/推理对齐检查单与 deploy 簇联动 |
-| `colleague-skill` | 按团队/目录聚合多项目经验 |
-
----
-
-## 六、提议新条目的格式
+## 五、提议新条目的格式
 
 ```markdown
 - [ ] **简短标题** — 一句话价值
@@ -127,12 +114,3 @@
   产出：工具路径 或 prompts/xxx.md
   验收：怎样算做完（1–3 条）
 ```
-
----
-
-## 已完成（归档）
-
-- [x] v1.3 — secondary 强制 `fetch_upstream.py` clone 后再 diff（2026-06-25）
-- [x] `fetch_upstream.py` / `diff_upstream.py` 初版
-- [x] 镜头：training / inference / engineering（`prompts/*_lens.md`）
-- [x] 分类、主/次开发路径、产出模板（classify / primary / secondary / OUTPUT-TEMPLATES）

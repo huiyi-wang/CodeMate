@@ -283,34 +283,8 @@ python tools/diff_upstream.py \
 
 ---
 
-## 关联 Skill
-
-
-| Skill               | 关系                        |
-| ------------------- | ------------------------- |
-| `ocr-inference`     | 推理框架方法论；冲突时以项目契约为准        |
-| `model-edge-deploy` | 部署与训练推理对齐                 |
-| `colleague-skill`   | 可按团队/目录聚合多项目经验（规划中，见 TODO） |
-
-
----
-
-## 版本记录
-
-
-| 版本       | 要点                                                          |
-| -------- | ----------------------------------------------------------- |
-| **v1.3** | secondary **强制** `fetch_upstream.py` clone 后再 diff；git 仅作补充 |
-| v1.2     | primary / secondary 双路径（git vs 架构 / clone）                  |
-| v1.0     | 初版：分型、分代际、Markdown 主交付                                      |
-
-
-细节见 [SKILL.md §9 迭代说明](SKILL.md#9-迭代说明)。
-
----
-
 ## 许可与贡献
 
 - 新能力提议：写入 [TODO.md](TODO.md) 按文末格式追加条目
-- 实现 TODO 项后：勾选 TODO、更新本表版本号与 `SKILL.md` §9
+- 实现 TODO 项后：勾选 TODO、同步更新 `SKILL.md` §9 迭代说明
 
