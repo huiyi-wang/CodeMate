@@ -76,11 +76,11 @@ flowchart LR
 ### 在 Cursor 里用
 
 ```
-@码伴 我是新人，帮我蒸馏 LLM ，重点讲清数据到推理流程
+@码伴 我是新人，帮我蒸馏 agent-harness项目 ，重点讲清数据到推理流程
 ```
 
 ```
-@码伴 蒸馏 OCR，我要改 ONNX 导出，先看 upstream 差异和 pitfalls
+@码伴 蒸馏 PaddleOCR-VL项目源码，我要改 ONNX 导出，先看 upstream 差异和 pitfalls
 ```
 
 通用指令：
