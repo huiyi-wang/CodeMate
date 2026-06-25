@@ -40,9 +40,9 @@
 
 ```mermaid
 flowchart LR
-    NEW[新人接手仓库] --> ASK[@码伴 / @code-mate-skill]
-    ASK --> READ[读 .distill/]
-  READ --> PIT[pitfalls 开工前检查]
+    NEW[新人接手仓库] --> ASK["@码伴 / @code-mate-skill"]
+    ASK --> READ["读 .distill/"]
+    READ --> PIT[pitfalls 开工前检查]
     READ --> EXP[experience 设计/改动参考]
     READ --> DIFF[upstream-diff 避免重复造轮子]
 ```
