@@ -2,7 +2,7 @@
 """Clone upstream repository at a pinned ref for secondary-dev diff.
 
 Usage:
-  python tools/fetch_upstream.py --repo sunny2109/SAFMN --ref main --out SAFMN/.distill/_upstream/SAFMN
+  python tools/fetch_upstream.py --repo owner/SAFMN --ref main --out SAFMN/.distill/_upstream/SAFMN
 
 Output: prints JSON line with clone path and resolved commit.
 """

@@ -71,7 +71,7 @@ git merge-base upstream/<ref> HEAD    # 无输出 → 须 hybrid
 ```bash
 # 1. 必做：clone
 python code-mate-skill/tools/fetch_upstream.py \
-  --repo sunny2109/SAFMN --ref main --out SAFMN/.distill/_upstream/SAFMN
+  --repo owner/SAFMN --ref main --out SAFMN/.distill/_upstream/SAFMN
 
 # 2. 必做：树级 diff
 python code-mate-skill/tools/diff_upstream.py \
@@ -88,7 +88,7 @@ git diff --no-index \
 **git 补充（可选，本地有 .git 时）**：
 
 ```bash
-git remote add upstream https://github.com/sunny2109/SAFMN.git   # 若无
+git remote add upstream https://github.com/owner/SAFMN.git   # 若无
 git fetch upstream main --depth 1
 git diff --name-status upstream/main...HEAD    # 交叉校验，非替代 clone diff
 git log -p $(git rev-list --max-parents=0 HEAD)..HEAD   # hybrid：init 后
@@ -209,7 +209,7 @@ git log -p $ROOT..HEAD -- gateway/        # init 之后演进
 | `batch` | 吞吐 | 显存、并发 |
 | `config` | 路径、环境 | 部署环境 |
 | `deploy` | 导出、端侧 | 上线形态 |
-| `integration` | 接内部框架 | wjh_ocr 等 |
+| `integration` | 接内部框架 | internal_ocr 等 |
 
 每簇输出：**diff 摘要 → 动机 → 避坑 → 是否应上游贡献/应本地化固化**
 

@@ -21,4 +21,4 @@
 
 - EXIF、max_side、crop_mode
 - temperature=0、max_tokens
-- 与 wjh_ocr / INFER 契约差异
+- 与 internal_ocr / INFER 契约差异

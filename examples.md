@@ -5,7 +5,7 @@
 ## 新人接手 — 对话示例
 
 ```
-@码伴 我是新人，接手 guopei/inference_code_huazhi，
+@码伴 我是新人，接手 team/inference_pipeline，
 帮我蒸馏并讲清五阶段推理顺序和 pitfalls 里必须先看的 L0
 ```
 

@@ -106,7 +106,7 @@ python code-mate-skill/tools/fetch_upstream.py \
 python code-mate-skill/tools/diff_upstream.py \
   --upstream <project>/.distill/_upstream/<short-name> \
   --local <project> \
-  --include networks,models,wjh_inference \
+  --include networks,models,local_inference \
   --exclude .distill,checkpoints,weights \
   --out <project>/.distill/_file_inventory.json
 
@@ -215,7 +215,7 @@ code-mate-skill/          # 码伴 CodeMate 技能包
 
 ```bash
 python tools/fetch_upstream.py \
-  --repo sunny2109/SAFMN \
+  --repo owner/SAFMN \
   --ref main \
   --out SAFMN/.distill/_upstream/SAFMN
 ```
@@ -290,7 +290,7 @@ python tools/diff_upstream.py \
 | ------------------- | ------------------------- |
 | `ocr-inference`     | 推理框架方法论；冲突时以项目契约为准        |
 | `model-edge-deploy` | 部署与训练推理对齐                 |
-| `colleague-skill`   | 可按人/团队聚合多项目经验（规划中，见 TODO） |
+| `colleague-skill`   | 可按团队/目录聚合多项目经验（规划中，见 TODO） |
 
 
 ---

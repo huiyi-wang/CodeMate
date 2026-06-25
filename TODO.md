@@ -29,8 +29,8 @@
 - [ ] **`distill_secondary.sh` / `distill_secondary.py` — 二次开发一键门禁**  
   顺序执行：`fetch_upstream.py` → `diff_upstream.py` → 打印三表 counts → 列出待 `git diff --no-index` 的 modified 文件。  
   ```bash
-  python tools/distill_secondary.py --project guopei/SR/MARCONetPlusPlus \
-    --repo csxmli2016/MARCONetPlusPlus --ref main \
+  python tools/distill_secondary.py --project team/SR/ExampleProject \
+    --repo owner/ExampleProject --ref main \
     --include networks,models,utils
   ```
 
@@ -48,7 +48,7 @@
 ### 中优先级
 
 - [ ] **`cluster_diff.py` — 改动自动聚类**  
-  按路径前缀 / 关键词（`infer`、`onnx`、`train`、`wjh_`）把 added/modified 归入 preprocess / model / deploy / integration 等簇，输出 JSON 草稿供 `experience.md` 使用。
+  按路径前缀 / 关键词（`infer`、`onnx`、`train`、`local_`）把 added/modified 归入 preprocess / model / deploy / integration 等簇，输出 JSON 草稿供 `experience.md` 使用。
 
 - [ ] **`extract_before_after.py` — 从 diff 抽代码块**  
   输入 unified diff，输出符合 [code_diff.md](prompts/code_diff.md) 的 before/after fenced blocks（附行号）。
@@ -63,7 +63,7 @@
 
 - [ ] **`diff_exclude_profiles.yaml`** — 按项目类型预置 exclude（权重、checkpoint、Testsets）  
 - [ ] **`link_checker.py`** — 校验 `.distill/*.md` 内相对链接与锚点是否存在  
-- [ ] **与 `colleague-skill` 互通** — 把某人项目经验注册为 colleague 子 skill 的导入器  
+- [ ] **与 `colleague-skill` 互通** — 把某团队项目经验注册为 colleague 子 skill 的导入器  
 
 ---
 
@@ -83,7 +83,7 @@
 - [ ] **`regression_risk.md`** — 从 diff 标「必跑评测 / 必对指标」清单（待验证项集中列）  
 - [ ] **`debt_classifier.md`** — 区分应固化 / 临时 debug / 应上游 PR / 应删除  
 - [ ] **`incremental_distill.md`** — 增量模式操作单（`git diff` 触达模块 → 只更新对应 §）  
-- [ ] **`cross_project_synth.md`** — 同一作者多项目（如 `guopei/*`）横向提炼共性问题  
+- [ ] **`cross_project_synth.md`** — 同一团队多项目（如 `team/*`）横向提炼共性问题  
 
 ### 产出压缩
 
@@ -115,7 +115,7 @@
 |------------|------|
 | `ocr-inference` | 推理类项目蒸馏后自动生成「契约对照」节 |
 | `model-edge-deploy` | 训练/推理对齐检查单与 deploy 簇联动 |
-| `colleague-skill` | 按人/团队聚合 `guopei`-级目录经验 |
+| `colleague-skill` | 按团队/目录聚合多项目经验 |
 
 ---
 

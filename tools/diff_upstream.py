@@ -5,7 +5,7 @@ Usage:
   python tools/diff_upstream.py \\
     --upstream SAFMN/.distill/_upstream/SAFMN \\
     --local SAFMN \\
-    --include basicsr,wjh_inference,wjh_convert \\
+    --include basicsr,local_inference,local_convert \\
     --exclude node_modules,.git,__pycache__,TensorRT-8.6.1.6 \\
     --out SAFMN/.distill/_file_inventory.json
 

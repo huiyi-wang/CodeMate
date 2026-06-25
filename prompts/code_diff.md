@@ -34,7 +34,7 @@
 python code-mate-skill/tools/diff_upstream.py \
   --upstream <project>/.distill/_upstream/<name> \
   --local <project> \
-  --include basicsr,wjh_inference,wjh_convert \
+  --include basicsr,local_inference,local_convert \
   --out <project>/.distill/_file_inventory.json
 ```
 
@@ -54,13 +54,13 @@ git diff --name-status upstream/<ref>...HEAD
 
 | 文件 | 簇 | 摘要 |
 |------|-----|------|
-| `wjh_inference/inference_safmn.py` | inference | tile 推理入口 |
+| `local_inference/inference_model.py` | inference | tile 推理入口 |
 
 ### 删除文件（deleted）— 共 N 个
 
 | 文件 | 摘要 |
 |------|------|
-| `scripts/to_onnx/convert_onnx.py` | 本地未保留（或已迁移至 wjh_convert） |
+| `scripts/to_onnx/convert_onnx.py` | 本地未保留（或已迁移至 local_convert） |
 
 ### 修改文件（modified）— 共 N 个
 
@@ -86,7 +86,7 @@ git diff --name-status upstream/<ref>...HEAD
 | **上游** | `.distill/_upstream/SAFMN/basicsr/archs/safmn_arch.py` | [打开](./_upstream/SAFMN/basicsr/archs/safmn_arch.py) |
 | **行号** | 本地 `166-201` · 上游 `166-170` | 以下 diff 覆盖 **全部** 差异 hunk |
 
-> 基线：`sunny2109/SAFMN@1a41206` · 变更类型：**修改**（modified）
+> 基线：`owner/SAFMN@1a41206` · 变更类型：**修改**（modified）
 ```
 
 说明：
@@ -125,7 +125,7 @@ git diff --no-index \
 ### only_local → **新增文件（added）**
 
 - **修改前**：`（上游无此文件）`
-- **修改后**：贴 **完整文件** 或按函数分段贴全文件内容；顶部链接 `[wjh_inference/inference_safmn.py](../wjh_inference/inference_safmn.py)`
+- **修改后**：贴 **完整文件** 或按函数分段贴全文件内容；顶部链接 `[local_inference/inference_model.py](../local_inference/inference_model.py)`
 - 文件 >300 行：按 **类/函数** 分段，**每段须连续覆盖全文件**，段末注 `§2/3`；不得只贴入口而跳过中间逻辑
 
 ### only_upstream → **删除文件（deleted）**

@@ -28,7 +28,7 @@ python code-mate-skill/tools/fetch_upstream.py \
 
 ```bash
 python code-mate-skill/tools/fetch_upstream.py \
-  --repo sunny2109/SAFMN \
+  --repo owner/SAFMN \
   --ref main \
   --out SAFMN/.distill/_upstream/SAFMN
 ```
@@ -56,7 +56,7 @@ cd <clone-path> && git rev-parse HEAD
 python code-mate-skill/tools/diff_upstream.py \
   --upstream <project>/.distill/_upstream/<short-name> \
   --local <project> \
-  --include basicsr,wjh_inference \
+  --include basicsr,local_inference \
   --exclude TensorRT-8.6.1.6,.distill \
   --out <project>/.distill/_file_inventory.json
 ```

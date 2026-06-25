@@ -205,7 +205,7 @@ result = self.process_spotting_response(result, image_width, image_height)
 
 ## 代码对比全集
 
-### 新增 · `wjh_inference/inference_safmn.py`
+### 新增 · `local_inference/inference_model.py`
 （文件链接 + 本地全文或分段）
 
 ### 删除 · `scripts/foo.py`
@@ -259,7 +259,7 @@ result = self.process_spotting_response(result, image_width, image_height)
 **问题代码（当前）**
 
 ```python
-model_path="/home/kas/wangjinghui/AI-OCR/HunyuanOCR"
+model_path="/home/user/projects/AI-OCR/HunyuanOCR"
 ```
 
 **推荐写法**
