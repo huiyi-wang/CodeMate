@@ -1,0 +1,66 @@
+# 码伴 CodeMate — 可选注册表（多项目预填；`projects` 可留空）
+# 不填 projects 时：对话中直接给项目路径，由 classify 推断类型与 upstream。
+# 多项目 monorepo 时可为每项预填 path / dev_mode / upstream，见下方 schema。
+
+version: 2
+
+schema:
+  project_type:
+    primary: training | inference | engineering   # 必填
+    secondary: null | training | inference | engineering
+  dev_mode: primary | secondary | auto              # auto = Agent 推断后确认
+  rationale_source: git_history | architecture | hybrid   # primary；hybrid=中途 init
+  git_coverage: full | partial | none                     # partial=中途 init 后才有历史
+  upstream:                                         # secondary 必填
+    repo: ""                                        # owner/name 或 git URL
+    ref: ""                                         # tag / branch / commit（必填，不可空）
+    clone_path: ""                                  # 默认 <project>/.distill/_upstream/<short-name>；secondary 蒸馏前必须存在
+    local_path: ""                                  # 已有合法 clone 时可填，须 git rev-parse 校验
+    workdir: ".distill/_upstream/<short-name>"       # fetch_upstream.py --out 落点
+  layers: []                                        # primary+engineering 时建议列出
+  outputs:
+    - experience
+    - pitfalls
+    - architecture
+
+defaults:
+  enabled: true
+  dev_mode: auto
+  outputs:
+    - experience
+    - pitfalls
+    - architecture
+    - readme
+  ignore:
+    - "**/node_modules/**"
+    - "**/.git/**"
+    - "**/__pycache__/**"
+    - "**/.venv/**"
+    - "**/*.pt"
+    - "**/*.pth"
+    - "**/*.onnx"
+    - "**/models/**"
+    - "**/weights/**"
+
+# 按需添加；默认留空，便于跨仓库携带本 skill。
+projects: []
+
+# 添加示例（复制后改 path / upstream）：
+#  - id: my_project
+#    path: path/to/project
+#    description: ""
+#    project_type:
+#      primary: inference
+#      secondary: null
+#    dev_mode: auto
+#    upstream:
+#      repo: owner/name
+#      ref: main
+#      local_path: ""
+#    outputs:
+#      - experience
+#      - pitfalls
+#      - upstream-diff
+
+schedule:
+  mode: manual
